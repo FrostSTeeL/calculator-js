@@ -25,20 +25,20 @@ pCalButn.addEventListener('click', calPOf)
 function calBasic(event) {
     event.preventDefault();
     let bResult = bFirstNum.value / 100 * bSecondNum.value;
-    bResultField.value = bResult.toFixed(2);
+    bResultField.value = Math.round((bResult +  Number.EPSILON) * 1000) / 1000;
     // console.log(bResult)
 }
 
 function calAdd(event) {
     event.preventDefault();
     let aResult = parseFloat(aFirstNum.value) / 100 * parseFloat(aSecondNum.value) + parseFloat(aFirstNum.value);
-    aResultField.value = aResult.toFixed(2);
+    aResultField.value = Math.round((aResult +  Number.EPSILON) * 1000) / 1000;
     // console.log(aResult)
 }
 
 function calPOf(event) {
     event.preventDefault();
     let pResult = parseFloat(pFirstNum.value) / parseFloat(pSecondNum.value) * 100;
-    pResultField.value = pResult.toFixed(2);
+    pResultField.value = Math.round((pResult +  Number.EPSILON) * 1000) / 1000;
     // console.log(pResult)
 }
