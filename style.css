@@ -16,6 +16,8 @@ header, form, .w-title {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 1rem;
 }
 form input {
     padding: 0.5rem;
@@ -23,6 +25,7 @@ form input {
     font-size: 1rem;
     border: none;
     background: white;
+    max-width: 28%;
 }
 form button {
     padding: 0.5rem;
